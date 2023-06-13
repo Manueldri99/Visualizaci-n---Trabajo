@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Salarios de los Científicos de Datos</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: blue;
+            color: black;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Salarios para personas que trabajan en Big Data </h1>
+    <h4 class="main-autor">Nombre: Manuel Del Río Izquierdo</h3>
+    <h4 class="main-url">Url: <a href="https://stackblitz.com/edit/js-fmuc9g?file=index.html,style.css">https://stackblitz.com/edit/js-fmuc9g?file=index.html,style.css</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023">https://www.kaggle.com/datasets/arnabchaki/data-science-salaries-2023</a></h3>
+    <h4 class="main-fecha">Fecha: 6/6/2023</h4>
+    <br>
+    <br>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">1. Introducción</h2>
+        <div class="text">
+El objetivo de este proyecto es ver la evolución de los salarios que tienen las personas que trabajan en algo relacionado con el Big Data en diferentes empresas del mundo. La idea de este proyecto es ver si con el tiempo los salarios para los científicos de datos van aumentando
+<br>
+<br>
+
+Para ello se dispone de una base de datos donde se encuentran diferentes personas que han ejercicido una labor relacionada con el Big Data en diferentes empresas del mundo. En dicha base de datos se pueden encontrar variables como el salario que cobraba esa persona, la experencia laboral en dicho puesto, la labor que esta ejerciendo (Ciéntifico de Datos, Analista de Datos, Ingeniero de Machine Learning...), el país donde trabaja.etc. Dicha base de datos contiene datos desde el año 2020 hasta el año 2023.
+            
+            </br>
+            </br>
+            </br>
+        </div>
+    </div>
+
+    <!-- add data visualization -->
+    <div class="plot">
+        <!-- The first bar chart -->
+        <h2 class="plot-title">2. Análisis de la Base de Datos</h2>
+        <div class="text">
+          Para analizar la base de datos, se va a investigar que tipo de personas se encuentran. Para ello se van a mostrar diversos gráficos de sectores circulares para mostrar que tipo de personas se encuentran en esta base de datos.
+
+          Primero se mostrarán los países donde trabajan las diferentes personas:
+        </div>  
+
+        <iframe width="595" height="389" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyDej0MZyYgexFiAXR0DTkurNAi9NL1VP5vPmJlqP4Bz6UoYqBZS_if_FKIBljAYu7FE5p6QdpTJZf/pubchart?oid=601708070&amp;format=interactive"></iframe>
+
+        <div class="text">
+        Viendo el gráfico, se observa que la mayoría de las personas de la base de datos residen en Estados Unidos. Tambien se encuentran bastantes personas que residen en países occidentales europeos como España, Francia, Gran Bretaña o Alemania.
+
+        Ahora se va a mostrar otra gráfico donde se muestra el nivel de experiencia laboral
+        que tienen los trabajadores en esta base de datos:
+        </div>  
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyDej0MZyYgexFiAXR0DTkurNAi9NL1VP5vPmJlqP4Bz6UoYqBZS_if_FKIBljAYu7FE5p6QdpTJZf/pubchart?oid=243502271&amp;format=interactive"></iframe>
+
+        <div class="text">
+        La base de datos divide a las personas en cuatro categorí:
+            - Entry Level: Personas que tienen poca experencia
+            - Mid Level: Personas que tienen algunos años de experiencia
+            - Senior Level: Personas con muchos años de experiencia
+            - Executive Level: Personas que tienen altos cargos dentro de su empresa
+        Analiznado el gráfico se ven que la mayoría de las personas de la base de datos tienen varios años de experiencia, y muy pocos tienen altos cargos dentro de su empresa.
+
+        Para terminar de analizar la base de datos, se verán de que trabajan las personas de esta base de datos:
+        </div>  
+
+        <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQyDej0MZyYgexFiAXR0DTkurNAi9NL1VP5vPmJlqP4Bz6UoYqBZS_if_FKIBljAYu7FE5p6QdpTJZf/pubchart?oid=509028616&amp;format=interactive"></iframe>
+
+        <div class="text">
+            Viendo el gráfico, los trabajos que mas desempeñan las personas de la base de datos son Ingenieros de Datos, Científicos de Datos, Analista de Datos e Ingenieros de Machine Learning
+       </div>
+
+        <h2 class="plot-title">3. Salarios de los trabajadores de la Base de Datos</h2>
+        <div class="text">
+          A partir de ahora se va a analizar el salario de las personas que se encuentran en esta base de datos. Primero, se va a obtener un gráfico que nos permite ver la evolución de salarios de las personas que trabajan con algo relacionado con el Big Data con respecto al tiempo. Para ello se va a realizar un gráfico de columnas agrupadas que es el siguiente:
+        </div> 
+
+        <iframe title="Porcentaje de los salarios por año" aria-label="Grouped Column Chart" id="datawrapper-chart-gYipi" src="https://datawrapper.dwcdn.net/gYipi/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+</script>
+
+   <div class="text">
+       En este gráfico se puede ver el porcentaje de personas que cobran entre un determinado rango de dinero, los 5 rangos elegidos son los que se aprecian en la leyenda.
+
+       Se ha escogido este gráfico, porque así se aprecia facilmente como varía el porcentaje de la cantidad que cobran los trabajadores en los últimos años.
+
+       Analizando el gráfico se puede observar varias cosas:
+        - Primero, que el porcentaje de perosnas que cobra menos de 5000 dolares ha bajado considerablemente conforme han pasado los años
+        - En 2020, el rango de salario con mayor cantidad de personas es el de menor de 5000 dolares. En 2021, el rango con mayor porcentaje es rango de 5000 y 10000. Y en 2022 y 2023, el rango con mas porcentaje es el de 10000 y 15000. Esto denota que los salarios han ido aumentando conforme han ido pasando los años
+        - También se puede ver que el porcentaje de los rangos 15000 y 20000, y mas de 20000, ha ido aumentando con respecto al tiempo
+
+        Dicho todo esto, se puede llegar a la conclusión analizando dichos datos de que el salario de las personas que trabajan con algo relacionado con Big Data va aumentando con respecto al tiempo.
+
+        Para terminar, se va a mostrar un gráfico de boxplot para comprobar si las personas que tienen mas experiencia o altos cargos cobran mas que las demas personas.
+   </div> 
+    
+   <img src='boxplot.png' >
+
+   <div class="text">
+    Viendo el gráfico se puede comprobar que las personas con mas experiencia o altos cargos cobran mas que los demas
+</div> 
+        
+        </br>
+        </br>
+        <h2 class="plot-title">4. Conclusion Final</h2>
+        <div id="plotContainer4">
+          <div class="text">
+              La conclusión final del proyecto es que se ha conseguido ver la evolución de los salarios de las personas que trabajan en algo relacionado con el Big Data. Se ha comprobado con la base de datos utilizada que los salarios van aumentado conforme van pasando los años.
+          </div>
+    
+</body>
+</html>
